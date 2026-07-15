@@ -13,3 +13,9 @@ __v0_jsx-dev-runtime.ts
 node_modules
 .next/
 .DS_Store
+
+# Private business docs — strategy, pricing, provider names. Keep out of the
+# repo even if it goes public.
+todo.txt
+setia-alam-garden-services-prompt.md
+LAUNCH-CHECKLIST.md

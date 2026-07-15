@@ -18,8 +18,9 @@ export function SiteFooter() {
             </span>
           </div>
           <p className="text-sm leading-relaxed text-muted-foreground">
-            Your local, family-run garden and landscaping team serving Setia
-            Alam and the surrounding townships in Shah Alam, Selangor.
+            Your local garden and landscaping team serving Setia Alam and the
+            surrounding townships in Shah Alam, Selangor. Servis
+            penyelenggaraan taman &amp; landskap.
           </p>
         </div>
 
@@ -69,8 +70,7 @@ export function SiteFooter() {
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
               <span>
-                {site.address.street}, {site.address.locality},{' '}
-                {site.address.region}
+                Serving {site.serviceAreas.join(', ')} — {site.address.region}
               </span>
             </li>
             <li>
@@ -115,7 +115,7 @@ export function SiteFooter() {
           <p>
             &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <p>Placeholder content — details to be updated before launch.</p>
+          <p>Landskap &amp; penyelenggaraan taman — Setia Alam, Shah Alam.</p>
         </div>
       </div>
     </footer>

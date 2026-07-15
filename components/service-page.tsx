@@ -9,6 +9,7 @@ export function ServicePage({
   slug,
   h1,
   image,
+  imageAlt,
   intro,
   included,
   includedTitle = 'What\u2019s included',
@@ -17,6 +18,7 @@ export function ServicePage({
   slug: string
   h1: string
   image: string
+  imageAlt: string
   intro: string[]
   included: string[]
   includedTitle?: string
@@ -24,8 +26,25 @@ export function ServicePage({
 }) {
   const others = services.filter((s) => s.slug !== slug)
 
+  // FAQPage schema so Google's AI Overview and other answer engines can lift
+  // the FAQ answers directly, attributed to this page.
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       {/* Hero */}
       <section className="border-b border-border bg-secondary/40">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:py-20">
@@ -58,7 +77,7 @@ export function ServicePage({
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border shadow-sm">
             <Image
               src={image || '/placeholder.svg'}
-              alt={`${h1} — placeholder image`}
+              alt={imageAlt}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -103,8 +122,8 @@ export function ServicePage({
             Frequently asked questions
           </h2>
           <p className="mx-auto mt-2 max-w-xl text-center text-sm text-muted-foreground">
-            Placeholder answers below — refine these with your real pricing and
-            policies.
+            Common questions from homeowners around Setia Alam. Not covered
+            here? Just ask us on WhatsApp.
           </p>
           <div className="mt-8">
             <Faq items={faqs} />

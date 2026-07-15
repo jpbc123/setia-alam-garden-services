@@ -4,42 +4,41 @@ import type { Metadata } from 'next'
 import { ArrowRight, MapPin, MessageCircle } from 'lucide-react'
 import { CtaSection } from '@/components/cta-section'
 import { Testimonials } from '@/components/testimonials'
-import { services, site, trustStats } from '@/lib/site'
+import { services, site, trustPoints } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Garden Maintenance & Landscaping in Setia Alam, Shah Alam',
   description:
-    'Setia Alam Garden Services offers reliable garden maintenance, landscaping, artificial grass, and tree trimming for homes in Setia Alam, Alam Impian, Bukit Raja, and Eco Ardence.',
+    'Reliable garden maintenance, landscaping, artificial grass, and tree trimming for homes in Setia Alam, Alam Impian, Bukit Raja, and Eco Ardence. Servis penyelenggaraan taman dan landskap Setia Alam.',
   alternates: { canonical: '/' },
 }
 
 export default function HomePage() {
   const waHref = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
-    'Hi, I\u2019d like a quote for garden services.',
+    'Hi, I’d like a quote for garden services.',
   )}`
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://setiaalamgardenservices.example/#business',
+    '@id': `${site.url}/#business`,
     name: site.name,
-    image: 'https://setiaalamgardenservices.example/images/hero-garden.png',
+    image: `${site.url}/images/hero-garden.png`,
     description:
-      'Landscaping and garden maintenance company serving Setia Alam and surrounding areas in Shah Alam, Selangor, Malaysia.',
+      'Landscaping and garden maintenance services for homes in Setia Alam and surrounding areas of Shah Alam, Selangor, Malaysia.',
     telephone: site.phoneTel,
     email: site.email,
-    url: 'https://setiaalamgardenservices.example',
+    url: site.url,
     priceRange: 'RM',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: site.address.street,
       addressLocality: site.address.locality,
       addressRegion: site.address.region,
       postalCode: site.address.postalCode,
       addressCountry: site.address.country,
     },
     areaServed: site.serviceAreas.map((a) => ({ '@type': 'Place', name: a })),
-    openingHours: 'Mo-Sa 08:00-18:00',
+    openingHours: site.hoursSchema,
     makesOffer: services.map((s) => ({
       '@type': 'Offer',
       itemOffered: { '@type': 'Service', name: s.title },
@@ -58,7 +57,7 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10">
           <Image
             src="/images/hero-garden.png"
-            alt="A lush, well-maintained tropical garden — placeholder image"
+            alt="Lush, well-maintained tropical home garden in Setia Alam, Shah Alam"
             fill
             priority
             className="object-cover"
@@ -73,12 +72,15 @@ export default function HomePage() {
             Ardence
           </span>
           <h1 className="mt-5 max-w-2xl text-balance font-serif text-4xl font-semibold leading-tight text-background sm:text-5xl lg:text-6xl">
-            Beautiful gardens, cared for by your local Setia Alam team
+            Garden maintenance &amp; landscaping for Setia Alam homes
           </h1>
           <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-background/85">
-            From weekly lawn upkeep to full garden makeovers, we help homeowners
-            across Setia Alam keep their outdoor spaces green, healthy, and
-            effortless.
+            From weekly lawn upkeep to full garden makeovers, we help
+            homeowners across Setia Alam keep their outdoor spaces green,
+            healthy, and effortless.{' '}
+            <span className="text-background/70">
+              Servis penyelenggaraan taman &amp; landskap untuk rumah anda.
+            </span>
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -101,15 +103,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust signals */}
+      {/* Trust signals — honest points, not invented stats */}
       <section className="border-b border-border bg-card">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-10 sm:px-6 lg:grid-cols-4">
-          {trustStats.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="font-serif text-3xl font-semibold text-primary sm:text-4xl">
-                {stat.value}
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 py-10 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
+          {trustPoints.map((point) => (
+            <div key={point.title} className="text-center sm:text-left">
+              <p className="font-serif text-lg font-semibold text-primary">
+                {point.title}
               </p>
-              <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
+              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                {point.text}
+              </p>
             </div>
           ))}
         </div>
@@ -140,7 +144,7 @@ export default function HomePage() {
               <div className="relative aspect-[16/9] overflow-hidden">
                 <Image
                   src={s.image || '/placeholder.svg'}
-                  alt={`${s.title} — placeholder image`}
+                  alt={s.imageAlt}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -168,7 +172,8 @@ export default function HomePage() {
             Proudly local to Setia Alam &amp; nearby townships
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
-            We know the local soil, climate, and the gated and guarded
+            From Setia Indah and Setia Impian to Setia Perdana and Setia Eco
+            Park, we know the local soil, climate, and the gated and guarded
             communities in the area. If you&apos;re nearby, we can help.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-2">

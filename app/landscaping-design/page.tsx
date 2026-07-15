@@ -4,7 +4,7 @@ import { ServicePage } from '@/components/service-page'
 export const metadata: Metadata = {
   title: 'Landscaping Design & Build in Setia Alam | Garden Makeovers',
   description:
-    'Transform your outdoor space with landscaping design and build in Setia Alam — garden redesign, planting, hardscaping, and water features tailored to your home.',
+    'Transform your outdoor space with landscaping design and build in Setia Alam — garden redesign, planting, hardscaping, and water features. Landskap Setia Alam untuk rumah anda.',
   alternates: { canonical: '/landscaping-design' },
 }
 
@@ -14,6 +14,7 @@ export default function LandscapingDesignPage() {
       slug="landscaping-design"
       h1="Landscaping Design & Build in Setia Alam"
       image="/images/landscaping-design.png"
+      imageAlt="Newly landscaped tropical garden with planting and hardscaping at a Setia Alam home"
       intro={[
         'Whether you\u2019re starting with a bare plot or reimagining a tired garden, our landscaping design and build service turns your outdoor space into somewhere you\u2019ll actually want to spend time. We handle everything from the first sketch to the final planted bed.',
         'We begin by understanding how you want to use your garden — entertaining, a low-maintenance green view, a play area for the kids, or a bit of everything. From there we plan the layout, choose plants suited to the local climate, and bring in hardscaping like paving, decking, and retaining features to tie it all together.',
@@ -31,7 +32,7 @@ export default function LandscapingDesignPage() {
       faqs={[
         {
           q: 'How much does a garden redesign cost?',
-          a: 'Landscaping projects vary widely depending on size, materials, and complexity. As a placeholder guide, smaller refresh projects can start from a few thousand ringgit, while full redesigns with hardscaping and water features cost more. We\u2019ll provide a detailed quote after an on-site visit.',
+          a: 'Landscaping projects vary widely depending on size, materials, and complexity. As a rough guide, smaller refresh projects can start from a few thousand ringgit, while full redesigns with hardscaping and water features cost more. We\u2019ll provide a detailed quote after an on-site visit.',
         },
         {
           q: 'How long does a landscaping project take?',

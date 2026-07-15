@@ -5,9 +5,9 @@ import { CtaSection } from '@/components/cta-section'
 import { site } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'About Us | Local Family-Run Garden Team in Setia Alam',
+  title: 'About Us | Local Garden & Landscaping Team in Setia Alam',
   description:
-    'Setia Alam Garden Services is a local, family-run landscaping and garden maintenance team who know the properties, plants, and climate of Setia Alam inside out.',
+    'Setia Alam Garden Services is a local landscaping and garden maintenance team familiar with the homes, plants, and climate of Setia Alam, Shah Alam.',
   alternates: { canonical: '/about' },
 }
 
@@ -15,12 +15,12 @@ const values = [
   {
     icon: MapPin,
     title: 'Truly local',
-    text: 'Based in and around Setia Alam, we know the neighbourhoods, the gated communities, and the plants that thrive in our climate.',
+    text: 'We work in and around Setia Alam, so we know the neighbourhoods, the gated communities, and the plants that thrive in our climate.',
   },
   {
     icon: HeartHandshake,
-    title: 'Family-run care',
-    text: 'We\u2019re a small, family-run team, so every garden gets personal attention — not a rushed, one-size-fits-all service.',
+    title: 'Personal service',
+    text: 'Every garden gets personal attention — not a rushed, one-size-fits-all service.',
   },
   {
     icon: ShieldCheck,
@@ -42,21 +42,21 @@ export default function AboutPage() {
           <div>
             <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
               <Leaf className="size-3.5" />
-              Our story
+              About us
             </span>
             <h1 className="mt-4 text-balance font-serif text-4xl font-semibold leading-tight text-foreground sm:text-5xl">
               Your friendly neighbourhood garden team
             </h1>
             <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-              Setia Alam Garden Services is a local, family-run business built
-              on a simple idea: homeowners deserve a garden team they can
-              actually trust and rely on.
+              Setia Alam Garden Services is a local garden and landscaping
+              service built on a simple idea: homeowners deserve a garden team
+              they can actually trust and rely on.
             </p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border shadow-sm">
             <Image
               src="/images/about-team.png"
-              alt="Our friendly local garden team — placeholder image"
+              alt="Garden services team at work on a residential lawn in Setia Alam"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -69,27 +69,23 @@ export default function AboutPage() {
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:py-20">
         <div className="space-y-4 leading-relaxed text-muted-foreground">
           <p>
-            We started out helping neighbours keep their lawns and gardens tidy,
-            and word quickly spread. Today we look after gardens right across
-            Setia Alam, Alam Impian, Bukit Raja, and Eco Ardence — from simple
-            recurring maintenance to full garden makeovers.
+            We focus on one thing: keeping the gardens of Setia Alam, Alam
+            Impian, Bukit Raja, and Eco Ardence looking their best — from
+            simple recurring maintenance to full garden makeovers, artificial
+            grass, and tree work.
           </p>
           <p>
-            Because we&apos;re local, we understand the little things that make a
-            difference here: the fast-growing tropical grass, the heavy
+            Because we work locally, we understand the little things that make
+            a difference here: the fast-growing tropical grass, the heavy
             afternoon rains, the plants that love our climate, and the access
             procedures for gated and guarded communities. That local knowledge
             means less hassle for you and better results for your garden.
           </p>
           <p>
             Above all, we treat every garden as if it were our own. Whether
-            you&apos;re booking a one-off tidy-up or an ongoing maintenance plan,
-            you&apos;ll get honest advice, fair pricing, and a team that genuinely
-            cares about the result.
-          </p>
-          <p className="text-sm italic">
-            This is placeholder copy — feel free to replace it with your real
-            story, founding year, and personal touches.
+            you&apos;re booking a one-off tidy-up or an ongoing maintenance
+            plan, you&apos;ll get honest advice, fair pricing, and a team that
+            genuinely cares about the result.
           </p>
         </div>
       </section>

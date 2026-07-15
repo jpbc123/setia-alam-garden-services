@@ -4,7 +4,7 @@ import { ServicePage } from '@/components/service-page'
 export const metadata: Metadata = {
   title: 'Garden Maintenance in Setia Alam | Lawn Mowing & Upkeep',
   description:
-    'Reliable weekly, biweekly, and monthly garden maintenance in Setia Alam — lawn mowing, hedge trimming, weeding, and fertilizing for a garden that always looks its best.',
+    'Reliable weekly, biweekly, and monthly garden maintenance in Setia Alam — lawn mowing, hedge trimming, weeding, and fertilizing. Servis penyelenggaraan taman dan potong rumput Setia Alam.',
   alternates: { canonical: '/garden-maintenance' },
 }
 
@@ -14,6 +14,7 @@ export default function GardenMaintenancePage() {
       slug="garden-maintenance"
       h1="Garden Maintenance in Setia Alam"
       image="/images/garden-maintenance.png"
+      imageAlt="Lawn mowing and hedge trimming during a recurring garden maintenance visit in Setia Alam"
       intro={[
         'Keeping a garden looking its best in the Malaysian climate takes regular attention — grass grows fast, weeds appear overnight, and hedges quickly lose their shape. Our recurring garden maintenance service takes all of that off your hands so your outdoor space always looks cared for.',
         'We offer flexible packages to suit how your garden grows and how hands-on you want to be. Choose weekly visits for a manicured look, biweekly for the best balance of cost and tidiness, or monthly for lighter upkeep. Every visit includes mowing, edging, and a general tidy-up so you come home to a neat garden every time.',
@@ -31,7 +32,7 @@ export default function GardenMaintenancePage() {
       faqs={[
         {
           q: 'How much does regular garden maintenance cost?',
-          a: 'Pricing depends on your garden size and how often you\u2019d like us to visit. As a rough placeholder guide, recurring maintenance for a typical landed home starts from around RM120–RM250 per visit. Contact us for an exact quote based on your property.',
+          a: 'Pricing depends on your garden size and how often you\u2019d like us to visit. As a rough guide, recurring maintenance for a typical landed home starts from around RM120–RM250 per visit. Contact us for an exact quote based on your property.',
         },
         {
           q: 'How often should I schedule maintenance?',

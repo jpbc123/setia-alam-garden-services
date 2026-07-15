@@ -4,7 +4,7 @@ import { ServicePage } from '@/components/service-page'
 export const metadata: Metadata = {
   title: 'Artificial Grass Installation in Setia Alam | Synthetic Turf',
   description:
-    'Professional artificial grass installation in Setia Alam — low-maintenance, evergreen synthetic turf for lawns, patios, and rooftops that stays lush in any weather.',
+    'Professional artificial grass installation in Setia Alam — low-maintenance synthetic turf for lawns, patios, and rooftops. Pemasangan rumput tiruan Setia Alam.',
   alternates: { canonical: '/artificial-grass' },
 }
 
@@ -14,6 +14,7 @@ export default function ArtificialGrassPage() {
       slug="artificial-grass"
       h1="Artificial Grass Installation in Setia Alam"
       image="/images/artificial-grass.png"
+      imageAlt="Artificial grass being installed on a residential lawn in Setia Alam"
       intro={[
         'Artificial grass is one of the most popular ways to enjoy a green, tidy lawn without the constant upkeep. It stays lush through the dry spells and drains well during the heavy rains — no mowing, no muddy patches, and no brown spots to worry about.',
         'We supply and install high-quality synthetic turf for front lawns, backyards, patios, balconies, rooftops, and play areas. Our team prepares the base properly for good drainage, lays the turf neatly with clean edges, and secures everything so it looks natural and lasts for years.',
@@ -31,7 +32,7 @@ export default function ArtificialGrassPage() {
       faqs={[
         {
           q: 'How much does artificial grass cost per square foot?',
-          a: 'Cost depends on the turf grade and how much ground preparation is needed. As a placeholder guide, supply and installation typically ranges from around RM12–RM25 per square foot. We\u2019ll measure your space and give an exact quote.',
+          a: 'Cost depends on the turf grade and how much ground preparation is needed. As a rough guide, supply and installation typically ranges from around RM12–RM25 per square foot. We\u2019ll measure your space and give an exact quote.',
         },
         {
           q: 'How long does artificial grass last?',

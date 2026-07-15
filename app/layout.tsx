@@ -3,6 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import { Fraunces, Nunito_Sans } from 'next/font/google'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
+import { WhatsAppFloat } from '@/components/whatsapp-float'
+import { site } from '@/lib/site'
 import './globals.css'
 
 const fraunces = Fraunces({
@@ -18,14 +20,13 @@ const nunitoSans = Nunito_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://setiaalamgardenservices.example'),
+  metadataBase: new URL(site.url),
   title: {
     default: 'Setia Alam Garden Services | Landscaping & Garden Maintenance',
     template: '%s | Setia Alam Garden Services',
   },
   description:
-    'Trusted garden maintenance, landscaping, artificial grass, and tree trimming services in Setia Alam, Alam Impian, Bukit Raja, and Eco Ardence, Shah Alam.',
-  generator: 'v0.app',
+    'Trusted garden maintenance, landscaping, artificial grass, and tree trimming services in Setia Alam, Alam Impian, Bukit Raja, and Eco Ardence, Shah Alam. Servis penyelenggaraan taman dan landskap Setia Alam.',
   icons: {
     icon: [
       {
@@ -64,6 +65,7 @@ export default function RootLayout({
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
+        <WhatsAppFloat />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
