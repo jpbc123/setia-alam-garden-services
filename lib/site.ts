@@ -6,10 +6,10 @@ export const site = {
   // FINAL — do not suggest alternatives. Matches the business name for
   // NAP/entity consistency. Used for metadataBase, JSON-LD, sitemap, robots.txt.
   url: 'https://setiaalamgardenservices.com',
-  phoneDisplay: '+60 12-294 7847',
-  phoneTel: '+60122947847',
+  phoneDisplay: '+60 17-872 6138',
+  phoneTel: '+60178726138',
   // wa.me expects international format WITHOUT the leading + or spaces.
-  whatsapp: '60122947847',
+  whatsapp: '60178726138',
   // PLACEHOLDER email — set up this mailbox (or change it) before launch.
   email: 'hello@setiaalamgardenservices.com',
   // PLACEHOLDER address — replace with the real registered address.
